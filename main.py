@@ -1,17 +1,21 @@
 from vehicles import *
+from geometric_shapes import *
+from smart_devices import *
 
 
 def demonstrate_basic_classes():
+    print("=" * 50)
     print("ПРИМЕР БАЗОВЫХ КЛАССОВ\n")
+    print("=" * 50)
 
-    #WheeledVehicle
+    # WheeledVehicle
     print("1. Транспортное средство:")
     car = WheeledVehicle(180, "бензин", 4)
     print(car.start_engine())
     print(car.check_tires())
     print()
 
-    #CargoTransport
+    # CargoTransport
     print("2. Грузовой транспорт:")
     truck = CargoTransport(90, "дизель", 5000)
     print(truck.start_engine())
@@ -19,7 +23,7 @@ def demonstrate_basic_classes():
     print(truck.load_cargo(4000))  # Перегруз
     print()
 
-    #PassengerTransport
+    # PassengerTransport
     print("3. Пассажирский транспорт:")
     bus = PassengerTransport(80, "газ", 40)
     print(bus.start_engine())
@@ -27,7 +31,7 @@ def demonstrate_basic_classes():
     print(bus.board_passengers(10))  # Перегруз
     print()
 
-    #EcoFriendlyVehicle
+    # EcoFriendlyVehicle
     print("4. Экологичный транспорт:")
     eco_car = EcoFriendlyVehicle(120, "электричество", 0)
     print(eco_car.start_engine())
@@ -57,7 +61,7 @@ def demonstrate_heavy_duty():
 def demonstrate_hybrid_van():
     print("ПРИМЕР ГИБРИДНОГО ФУРГОНА\n")
 
-    #гибридный фургон
+    # гибридный фургон
     delivery_van = HybridDeliveryVan(
         max_speed=120,
         fuel_type="гибрид (бензин/электричество)",
@@ -72,7 +76,7 @@ def demonstrate_hybrid_van():
     print("\nНачальный статус:")
     print(delivery_van.status())
 
-    #функциональность
+    # функциональность
     print("\nФункциональность")
     print(delivery_van.start_engine())
     print(delivery_van.load_cargo(800))
@@ -86,6 +90,14 @@ def demonstrate_hybrid_van():
 
 
 if __name__ == "__main__":
+    # Демонстрация транспортных средств (задание 1)
     demonstrate_basic_classes()
     demonstrate_heavy_duty()
     demonstrate_hybrid_van()
+
+    # Демонстрация геометрических фигур (задание 2)
+    demonstrate_geometric_shapes()
+
+    # Демонстрация умных устройств (задание 3)
+    demonstrate_diamond_problem()
+    demonstrate_smart_devices()
