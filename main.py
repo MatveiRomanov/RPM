@@ -90,14 +90,11 @@ def demonstrate_hybrid_van():
 
 
 if __name__ == "__main__":
-    # Демонстрация транспортных средств (задание 1)
     demonstrate_basic_classes()
     demonstrate_heavy_duty()
     demonstrate_hybrid_van()
 
-    # Демонстрация геометрических фигур (задание 2)
     demonstrate_geometric_shapes()
 
-    # Демонстрация умных устройств (задание 3)
     demonstrate_diamond_problem()
     demonstrate_smart_devices()
