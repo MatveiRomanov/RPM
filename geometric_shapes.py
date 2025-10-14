@@ -103,4 +103,3 @@ def demonstrate_geometric_shapes():
             print(f"   Диагональ: {figure.diagonal():.2f}")
         elif isinstance(figure, RightTriangle):
             print(f"   Гипотенуза: {figure.hypotenuse:.2f}")
-
