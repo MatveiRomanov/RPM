@@ -1,8 +1,8 @@
-from payment_strategies import CreditCardPayment, EWalletPayment, CashPayment, PaymentContext
+from payment_strategies import *
 
 
 def main():
-    # Создаем контекст оплаты
+
     payment_context = PaymentContext()
 
     print("\nСИСТЕМА ОПЛАТЫ ТОВАРОВ")
