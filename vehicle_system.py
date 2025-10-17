@@ -52,10 +52,10 @@ class Vehicle(ABC):
 
 class Car(Vehicle):
     def drive(self):
-        return f"Автомобиль едет с {self.engine.start().lower()}"
+        return f"{self.engine.start().lower()}"
 
 
 class Bike(Vehicle):
     def drive(self):
-        return f"Мотоцикл едет с {self.engine.start().lower()}"
+        return f"{self.engine.start().lower()}"
 
