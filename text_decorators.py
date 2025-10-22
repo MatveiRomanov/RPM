@@ -19,8 +19,7 @@ class UpperCaseDecorator(TextDecorator):
 class BorderDecorator(TextDecorator):
     def print_text(self):
         text = self._printer.print_text()
-        border = "*" * (len(text) + 4)
-        return f"{border}\n* {text} *\n{border}"
+        return text
 
 
 class ExclamationDecorator(TextDecorator):

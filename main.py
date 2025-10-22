@@ -4,7 +4,7 @@ from access_control import *
 
 
 def demonstrate_text_system():
-    print("=== Задание 1: Система вывода текста ===\n")
+    print("Система вывода текста\n")
 
     basic_printer = TextPrinter("Hello World")
     print("1. Базовый текст:", basic_printer.print_text())
@@ -20,11 +20,11 @@ def demonstrate_text_system():
 
     # Комбинирование декораторов
     combined = BorderDecorator(UpperCaseDecorator(ExclamationDecorator(basic_printer)))
-    print("5. Комбинированный (рамка + верхний регистр + восклицания):\n", combined.print_text())
+    print("5. Комбинированный:\n", combined.print_text())
 
 
 def demonstrate_coffee_system():
-    print("\n=== Задание 2: Система онлайн-заказа кофе ===\n")
+    print("\nСистема онлайн-заказа кофе\n")
 
     # Создание базового кофе
     simple_coffee = Coffee()
@@ -44,13 +44,11 @@ def demonstrate_coffee_system():
 
 
 def demonstrate_access_control():
-    print("\n=== Задание 3: Система проверки доступа ===\n")
+    print("\nСистема проверки доступа\n")
 
-    # Создание пользователей
     admin_user = User(1, "Алексей", "admin")
     regular_user = User(2, "Мария", "user")
 
-    # Тестирование с администратором
     set_current_user(admin_user)
     try:
         result = delete_user(5)
@@ -58,7 +56,6 @@ def demonstrate_access_control():
     except PermissionError as e:
         print(f"1. Администратор: Ошибка - {e}")
 
-    # Тестирование с обычным пользователем
     set_current_user(regular_user)
     try:
         result = delete_user(5)
@@ -66,7 +63,6 @@ def demonstrate_access_control():
     except PermissionError as e:
         print(f"2. Обычный пользователь: Ошибка - {e}")
 
-    # Тестирование без авторизации
     set_current_user(None)
     try:
         result = delete_user(5)
@@ -76,13 +72,9 @@ def demonstrate_access_control():
 
 
 def main():
-    print("=== Лабораторная работа №7 - Паттерн 'Decorator' ===\n")
-
     demonstrate_text_system()
     demonstrate_coffee_system()
     demonstrate_access_control()
-
-    print("\n=== Все задания выполнены! ===")
 
 
 if __name__ == "__main__":
